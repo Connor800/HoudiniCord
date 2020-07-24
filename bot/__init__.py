@@ -11,6 +11,7 @@ TOKEN = "YOUR BOT TOKEN HERE"
 class DiscordBot(IPlugin):
     author = "Connor800"
     description = "Plugin to start a bot along with Houdini"
+    version = "1"
 
     def __init__(self, server):
         self.loop = loop = asyncio.get_event_loop()
