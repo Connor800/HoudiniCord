@@ -11,6 +11,7 @@ class Penguin(commands.Converter):
     1. Lookup by ID.
     2. Lookup by username.
     """
+
     @staticmethod
     async def convert(ctx, arg):
         houdini = ctx.bot.houdini
@@ -26,6 +27,7 @@ class Penguin(commands.Converter):
 
 class MyCog(commands.Cog, name="My Cog"):
     """Useful commands."""
+
     def __init__(self, bot, houdini):
         self.bot = bot
         self.houdini = bot.houdini = houdini # make houdini accesible when this cog isn't
@@ -65,6 +67,7 @@ class MyCog(commands.Cog, name="My Cog"):
 
 def setup(server, loop):
     """Function called by the plugin to get a bot instance."""
+
     bot = commands.Bot("!",
         description="I'm a bot that works with Houdini Asyncio!",
         loop=loop)
